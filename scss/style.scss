@@ -1,0 +1,147 @@
+/* &display=swap*/
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+ol li,
+ul li {
+   list-style: none;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+img {
+   vertical-align: top;
+}
+html,
+body {
+   height: 100%;
+   font-size: 14px;
+   line-height: 1;
+}
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+[class*="__container"] {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+/* -------------- */
+
+.page {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100%;
+   background-color: #555;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   overflow: hidden;
+   // .page__container
+   &__container {
+   }
+}
+.time {
+   display: flex;
+   color: #fff;
+   gap: 40px;
+   flex-wrap: wrap;
+   // .time__circle
+   &__circle {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+         position: absolute;
+         font-size: 0.55em;
+         font-weight: 300;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         transform: translateX(-50%) translateY(10px);
+      }
+      svg {
+         position: relative;
+         width: 150px;
+         height: 150px;
+         transform: rotate(270deg);
+         circle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+            stroke-width: 4;
+            stroke: #191919;
+            transform: translate(5px, 5px);
+            &:nth-child(2) {
+               stroke: var(--clr);
+               stroke-dasharray: 440;
+            }
+         }
+      }
+   }
+   // .time__ap
+   &__ap {
+      position: relative;
+      font-size: 1.1em;
+      transform: translateX(-20px);
+   }
+   // .time__watch
+   &__watch {
+      position: absolute;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.8em;
+      transform: translateY(-16px);
+   }
+   // .time__ampm
+   &__ampm {
+   }
+}
+.dots {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 10;
+   display: flex;
+   justify-content: center;
+   &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      width: 15px;
+      height: 15px;
+      background: var(--clr);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+   }
+}

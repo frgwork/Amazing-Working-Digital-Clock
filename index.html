@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Amazing Working Digital Clock using Html CSS SVG & Javascript | Simple Javascript Project</title>
+</head>
+
+<body>
+
+   <div class="page">
+      <div class="page__container">
+         <div class="time" id="time">
+            <div class="time__circle" style="--clr:#ff2972;">
+               <div class="dots hr_dot"></div>
+               <svg>
+                  <circle cx="70" cy="70" r="70"></circle>
+                  <circle cx="70" cy="70" r="70" id="hh"></circle>
+               </svg>
+               <div class="time__watch" id="hours">00</div>
+            </div>
+            <div class="time__circle" style="--clr: #fee800;">
+               <div class="dots min_dot"></div>
+               <svg>
+                  <circle cx="70" cy="70" r="70"></circle>
+                  <circle cx="70" cy="70" r="70" id="mm"></circle>
+               </svg>
+               <div class="time__watch" id="minutes">00</div>
+            </div>
+            <div class="time__circle" style="--clr:#04fc43;">
+               <div class="dots sec_dot"></div>
+               <svg>
+                  <circle cx="70" cy="70" r="70"></circle>
+                  <circle cx="70" cy="70" r="70" id="ss"></circle>
+               </svg>
+               <div class="time__watch" id="seconds">00</div>
+            </div>
+            <div class="time__ap">
+               <div class="time__ampm" id="ampm">AM</div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>
